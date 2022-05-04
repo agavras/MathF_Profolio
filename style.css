@@ -1,0 +1,185 @@
+body {
+    background-color: #1d292c;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(76, 74, 72);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(136, 187, 53, 0.2);
+}
+
+#accueil {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-duration: 4.0s;
+    background-color: rgb(76, 74, 72);
+}
+
+#illustration {
+width: 100%;
+height: 100vh;
+text-align: center;
+}
+
+#illustration img {
+    height: 70%;
+}
+
+#illustration h1 {
+color: rgb(135, 187, 52);
+}
+
+#illustration h3 {
+    color: rgb(160, 160, 160);
+    }
+
+#imgOver {
+    margin-top: 32px;
+    animation: myanim3 5.0s ease-in-out infinite;
+}
+
+@keyframes myanim3 {
+    50% {
+        transform: scale(0.98);
+    }
+}
+
+#navbar {
+    text-align: center;
+    width: 100%;
+}
+
+#projets {
+    width: 75%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#projets table {
+    height: 90vh;
+    text-align: center;
+}
+
+#txtProj {
+    font-size: 1.3rem;
+}
+
+#modal1 {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(29, 41, 44, 0.9);
+    display: none;
+}
+
+#modal2 {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(29, 41, 44, 0.9);
+    display: none;
+}
+
+#modal3 {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(29, 41, 44, 0.9);
+    display: none;
+}
+
+.wrapper {
+    width: 360px;
+    height: 360px;
+}
+
+#contact {
+    width: 75%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#contact table{
+    width: 100%;
+}
+
+.left {
+    width: 50%;
+    text-align: right;
+}
+
+.right {
+    width: 50%;
+    text-align: left;
+}
+
+.parent_div1_boutton {
+    background-color:rgb(0, 0, 0);
+    color: rgb(135, 187, 52);
+}
+
+.link {
+    font-size: 1.2rem;
+    color: rgb(135, 187, 52);
+}
+
+.linkoff {
+    font-size: 1.2rem;
+    color: rgb(180, 180, 180);
+    text-decoration: none;
+}
+
+.link:hover {
+    font-size: 1.2rem;
+    color: rgb(230, 216, 205);
+}
+
+.linkMail {
+    font-size: 1.2rem;
+    color: rgb(135, 187, 52);
+    text-decoration: none;
+}
+
+.linkMail:hover {
+    font-size: 1.2rem;
+    color: rgb(230, 216, 205);
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.2rem;
+    color: azure;
+}
+
+#math {
+    color: rgb(135, 187, 52);
+}

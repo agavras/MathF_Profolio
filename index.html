@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    
+    <title>Mon profolio 2022</title>
+</head>
+<body>
+
+    <div id="accueil" class="animate__animated animate__fadeIn animate__1">
+        <a href="./indexwhite.html">
+        <img src="./maquette/darkSwitch.jpg" alt="dark switch">
+        </a>
+    </div>
+
+    <div id="illustration">
+        <a href="#projets">
+        <img id="imgOver" src="./imgProjets/illustration.webp" alt="illustration">
+        </a>
+        <h1>Mathieu FALEZ</h1>
+        <h3>Illustration & Dev</h3>
+    </div>
+
+    
+    <div id="projets" class="Empty">
+        <table>
+            <tr>
+                <td>
+                    <a href="#..." id="txtProj" class="link" onclick=showProject(1)>Projet 1</a>
+                </td>
+                <td>
+                    <a href="#..." id="txtProj" class="link" onclick=showProject(2)>Projet 2</a>
+                </td>
+                <td>
+                    <a href="#..." id="txtProj" class="link" onclick=showProject(3)>Projet 3</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class="wrapper"></div>
+                </td>
+            </tr>
+        </table>
+    
+        <div id="modal1">
+            <p> <br/></p>
+            <p> <br/></p>
+            <img src="./imgProjets/Afpa3d.jpg" alt="image projet Afpa3d">
+            <p>Modélisation 3d du batiment AFPA</p>
+            <p>de Saint-Étienne-du-Rouvray</p>
+            <p>pour la formation DWWM 2022</p>
+            <button onclick=hideProject(1)>Retour</button>
+            <button onclick=goTo(1)>Jouer</button>
+        </div>
+
+        <div id="modal2">
+            <p> <br/></p>
+            <p> <br/></p>
+            <img src="./imgProjets/EmbeddedBrowser.jpg" alt="image projet EmbeddedBrowser">
+            <p>Integration d'un navigateur web</p>
+            <p>à l'intérieur d'un jeu vidéo</p>
+            <p>qui est intégré dans une page web</p>
+            <button onclick=hideProject(2)>Retour</button>
+            <button onclick=goTo(2)>Jouer</button>
+        </div>
+
+        <div id="modal3">
+            <p> <br/></p>
+            <p> <br/></p>
+            <img src="./imgProjets/Impression.jpg" alt="image projet Impression">
+            <p>Application de peinture</p>
+            <p>inspiration gouache traditionnel</p>
+            <p>fonction "timelapse"</p>
+            <button onclick=hideProject(3)>Retour</button>
+            <button onclick=goTo(3)>Jouer</button>
+        </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="hover-effect.umd.js"></script>
+    <script src="./overeffect.js"></script>
+        
+        <div id="navbar">
+        <a href="#accueil" class="link" id="linkAccueil">Accueil</a>
+        <a href="#projets" class="linkoff" id="linkProjets">Projets </a>
+        <a href="#contact" class="link" id="linkContact">Contact</a>
+        </div>
+    </div>
+
+    <div id="contact" class="Empty">
+
+        <div id="navbar">
+                <canvas id="canvas"></canvas>
+                <script src="https://unpkg.com/@rive-app/canvas@1.0.18"></script>
+                    <script>
+                    // autoplays the first animation in the default artboard
+                    new rive.Rive({
+                    src: '/morphtest.riv',
+                    canvas: document.getElementById('canvas'),
+                    autoplay: true,
+                    layout: new rive.Layout({fit: 'none', alignment: 'center'}),
+                    })
+                    </script>
+            <h1 id="math">Mathieu FALEZ</h1>
+            <p>142, rue de l'abreuvoir</p>
+            <p>76116 Catenay</p>
+            <p>06.11.51.27.73</p>
+            <a class="linkMail" href="mailto:math.falez@gmail.com">math.falez@gmail.com</a>
+        </div>
+
+        <div id="navbar">
+            <a href="#accueil" class="link" id="linkAccueil">Accueil</a>
+            <a href="#projets" class="link" id="linkProjets">Projets</a>
+            <a href="#contact" class="linkoff" id="linkContact">Contact</a>
+        </div>
+    </div>
+
+    <div id="credits" class="Empty">
+        ...
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
