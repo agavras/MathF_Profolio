@@ -64,7 +64,7 @@ color: rgb(135, 187, 52);
     }
 }
 
-#navbar {
+.navbar {
     text-align: center;
     width: 100%;
 }
@@ -83,7 +83,7 @@ color: rgb(135, 187, 52);
     text-align: center;
 }
 
-#txtProj {
+#projets a {
     font-size: 1.3rem;
 }
 
@@ -132,24 +132,15 @@ color: rgb(135, 187, 52);
     width: 100%;
 }
 
-.left {
-    width: 50%;
-    text-align: right;
-}
-
-.right {
-    width: 50%;
-    text-align: left;
-}
-
-.parent_div1_boutton {
+/* .parent_div1_boutton {
     background-color:rgb(0, 0, 0);
     color: rgb(135, 187, 52);
-}
+} */
 
 .link {
     font-size: 1.2rem;
     color: rgb(135, 187, 52);
+    text-decoration: none;
 }
 
 .linkoff {
@@ -161,6 +152,7 @@ color: rgb(135, 187, 52);
 .link:hover {
     font-size: 1.2rem;
     color: rgb(230, 216, 205);
+    text-decoration: none;
 }
 
 .linkMail {
@@ -180,7 +172,7 @@ p {
     color: azure;
 }
 
-#math {
+h2 {
     color: rgb(135, 187, 52);
 }
 

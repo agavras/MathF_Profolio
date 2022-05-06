@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://unpkg.com/@rive-app/canvas@1.0.18"></script>
     <title>Mon profolio 2022</title>
 </head>
 <body>
 
     <div id="accueil" class="animate__animated animate__fadeIn animate__1">
-        <a href="./indexwhite.html">
+        <!-- <a href="./indexwhite.html">
         <img src="./maquette/darkSwitch.webp" alt="dark switch">
-        </a>
+        </a> -->
     </div>
 
     <div id="illustration">
@@ -29,13 +32,13 @@
         <table>
             <tr>
                 <td>
-                    <a href="#..." id="txtProj" class="link" onclick=showProject(1)>Projet 1</a>
+                    <a href="#projets" class="link" onclick=showProject(1)>Projet 1</a>
                 </td>
                 <td>
-                    <a href="#..." id="txtProj" class="link" onclick=showProject(2)>Projet 2</a>
+                    <a href="#projets" class="link" onclick=showProject(2)>Projet 2</a>
                 </td>
                 <td>
-                    <a href="#..." id="txtProj" class="link" onclick=showProject(3)>Projet 3</a>
+                    <a href="#projets" class="link" onclick=showProject(3)>Projet 3</a>
                 </td>
             </tr>
             <tr>
@@ -86,47 +89,38 @@
             <button onclick=hideProject(3)>Retour</button>
             <button onclick=goTo(3)>Jouer</button>
         </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="hover-effect.umd.js"></script>
-    <script src="./overeffect.js"></script>
         
-        <div id="navbar">
-        <a href="#accueil" class="link" id="linkAccueil">Accueil</a>
-        <a href="#projets" class="linkoff" id="linkProjets">Projets </a>
-        <a href="#contact" class="link" id="linkContact">Contact</a>
+        <div class="navbar">
+        <a href="#accueil" class="link">Accueil</a>
+        <a href="#projets" class="linkoff">&#x2022;</a>
+        <a href="#projets" class="linkoff">Projets</a>
+        <a href="#projets" class="linkoff">&#x2022;</a>
+        <a href="#contact" class="link">Contact</a>
         </div>
     </div>
 
     <div id="contact" class="Empty">
 
-        <div id="navbar">
-                <canvas id="canvas"></canvas>
-                <script src="https://unpkg.com/@rive-app/canvas@1.0.18"></script>
-                    <script>
-                    // autoplays the first animation in the default artboard
-                    new rive.Rive({
-                    src: '/morphtest.riv',
-                    canvas: document.getElementById('canvas'),
-                    autoplay: true,
-                    layout: new rive.Layout({fit: 'none', alignment: 'center'}),
-                    })
-                    </script>
-            <h1 id="math">Mathieu FALEZ</h1>
+        <div class="navbar">
+            <canvas id="canvas"></canvas>
+            <h2>Mathieu FALEZ</h2>
             <p>142, rue de l'abreuvoir</p>
             <p>76116 Catenay</p>
             <p>06.11.51.27.73</p>
             <a class="linkMail" href="mailto:math.falez@gmail.com">math.falez@gmail.com</a>
         </div>
 
-        <div id="navbar">
-            <a href="#accueil" class="link" id="linkAccueil">Accueil</a>
-            <a href="#projets" class="link" id="linkProjets">Projets</a>
-            <a href="#contact" class="linkoff" id="linkContact">Contact</a>
+        <div class="navbar">
+            <a href="#accueil" class="link">Accueil</a>
+            <a href="#contact" class="linkoff">&#x2022;</a>
+            <a href="#projets" class="link"> Projets</a>
+            <a href="#contact" class="linkoff">&#x2022;</a>
+            <a href="#contact" class="linkoff">Contact</a>
         </div>
     </div>
 
+    <script src="hover-effect.umd.js"></script>
+    <script src="./overeffect.js"></script>
     <script src="./app.js"></script>
 </body>
 </html>
