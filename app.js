@@ -1,13 +1,49 @@
-const modal1 = document.getElementById('modal1');
-const modal2 = document.getElementById('modal2');
-const modal3 = document.getElementById('modal3');
+const btnJourNuit = document.getElementById("btnJourNuit");
+let currentMode = "DARK";
+
+const modal1 = document.getElementById("modal1");
+const modal2 = document.getElementById("modal2");
+const modal3 = document.getElementById("modal3");
+
+// Event Listener
+btnJourNuit.addEventListener("click", changeCSSVariables);
+
+// Change les variables CSS pour switchmode Jour/Nuit
+function changeCSSVariables() {
+    if (currentMode === "DARK") {
+        document.documentElement.style.setProperty("--bgColor", "#ecf2f3");
+        document.documentElement.style.setProperty("--scrollbar-track", "#cedbdf");
+        document.documentElement.style.setProperty("--scrollbar-thumb", "#87bb34");
+        document.documentElement.style.setProperty("--switchColor", "#cedbdf");
+        document.documentElement.style.setProperty("--modalColor", "#ecf2f3e6");
+        document.documentElement.style.setProperty("--linkColor", "#45670F");
+        document.documentElement.style.setProperty("--linkOffColor", "#4b4b4b");
+        document.documentElement.style.setProperty("--linkOverColor", "#33251a");
+        document.documentElement.style.setProperty("--pColor", "black");
+        document.documentElement.style.setProperty("--bgBoxColor", "#d280d280");
+        currentMode = "LIGHT";
+
+    } else if (currentMode === "LIGHT") {
+        document.documentElement.style.setProperty("--bgColor", "#1d292c");
+        document.documentElement.style.setProperty("--scrollbar-track", "#4c4a48");
+        document.documentElement.style.setProperty("--scrollbar-thumb", "#88bb3533");
+        document.documentElement.style.setProperty("--switchColor", "#4c4a48");
+        document.documentElement.style.setProperty("--modalColor", "#1d292ce6");
+        document.documentElement.style.setProperty("--linkColor", "#87bb34");
+        document.documentElement.style.setProperty("--linkOffColor", "#b4b4b4");
+        document.documentElement.style.setProperty("--linkOverColor", "#e6d8cd");
+        document.documentElement.style.setProperty("--pColor", "azure");
+        document.documentElement.style.setProperty("--bgBoxColor", "#b4d2ff4d");
+        currentMode = "DARK";
+    }
+}
 
 //Rive anim page contact
 new rive.Rive({
-    src: '/morphtest.riv',
-    canvas: document.getElementById('canvas'),
+    src: "/morphtest.riv",
+    canvas: document.getElementById("canvas"),
     autoplay: true,
-    layout: new rive.Layout({fit: 'none', alignment: 'center'}),
+    layout: new rive.Layout({fit: "none", alignment: "center"}),
 })
 
 //affiche la modal projet 1 ou 2 ou 3
