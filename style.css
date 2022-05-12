@@ -1,10 +1,11 @@
+/* Réglage general de la page html */
 html {
     scroll-behavior: smooth;
     --bgColor: #1d292c;
     --scrollbar-track: #4c4a48;
     --scrollbar-thumb: #88bb3533;
     --switchColor: #4c4a48;
-    --modalColor: #1d292ce6;
+    --modalColor: #1d292c;
     --linkColor: #87bb34;
     --linkOffColor:#b4b4b4;
     --linkOverColor: #e6d8cd;
@@ -35,6 +36,75 @@ body {
     background: var(--scrollbar-thumb);
 }
 
+div {
+    width: 100%;
+    text-align: center;
+}
+
+button {
+    border-radius: 16px;
+    border-style: none;
+    width: 80px;
+    height: 32px;
+    background-color: var(--bgBoxColor);
+    color: white;
+    font-size: 1.1rem;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 32px;
+}
+button:hover {
+cursor: pointer;
+}
+
+a {
+    font-size: 1.3rem;
+}
+
+img {
+    margin-top: 100px;
+    width: 256px;
+    height: 256px;
+}
+
+h1 {
+    color: rgb(135, 187, 52);
+}
+    
+h2 {
+    color: rgb(160, 160, 160);
+}
+    
+p {
+    font-size: 1.2rem;
+    color: var(--pColor);
+}
+
+.navbar {
+    text-align: center;
+    width: 100%;
+}
+
+.link {
+    font-size: 1.2rem;
+    color: var(--linkColor);
+    text-decoration: none;
+}
+
+.linkoff {
+    font-size: 1.2rem;
+    color: var(--linkOffColor);
+    text-decoration: none;
+}
+
+.link:hover {
+    font-size: 1.2rem;
+    color: var(--linkOverColor);
+    text-decoration: none;
+}
+
+
+/* Section Accueil */
 #accueil {
     width: 100%;
     height: 32px;
@@ -43,6 +113,10 @@ body {
     align-items: center;
     animation-duration: 4.0s;
     background-color: var(--switchColor);
+}
+
+#accueil img {
+    margin-top: 0px;
 }
 
 #btnJourNuit {
@@ -56,22 +130,13 @@ width: 100%;
 height: 100vh;
 text-align: center;
 }
-
-#illustration img {
-    height: 70%;
-}
-
-#illustration h1 {
-color: rgb(135, 187, 52);
-}
-
-#illustration h3 {
-    color: rgb(160, 160, 160);
-    }
-
+    
 #imgOver {
     margin-top: 32px;
     animation: myanim3 5.0s ease-in-out infinite;
+    width: 64%;
+    height: auto;
+    max-width: 320px;
 }
 
 @keyframes myanim3 {
@@ -80,11 +145,8 @@ color: rgb(135, 187, 52);
     }
 }
 
-.navbar {
-    text-align: center;
-    width: 100%;
-}
 
+/* Section Projet */
 #projets {
     width: 75%;
     height: 100vh;
@@ -92,15 +154,6 @@ color: rgb(135, 187, 52);
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-}
-
-#projets table {
-    height: 90vh;
-    text-align: center;
-}
-
-#projets a {
-    font-size: 1.3rem;
 }
 
 #modal1 {
@@ -131,10 +184,18 @@ color: rgb(135, 187, 52);
 }
 
 .wrapper {
-    width: 360px;
-    height: 360px;
+    min-width: 360px;
+    min-height: 360px;
+    max-width: 360px;
+    max-height: 360px;
 }
 
+.box-area {
+    display: none;
+}
+
+
+/* Section Contact */
 #contact {
     width: 75%;
     height: 100vh;
@@ -144,43 +205,25 @@ color: rgb(135, 187, 52);
     flex-wrap: wrap;
 }
 
-#contact table{
-    width: 100%;
-}
 
-.link {
-    font-size: 1.2rem;
-    color: var(--linkColor);
-    text-decoration: none;
-}
-
-.linkoff {
-    font-size: 1.2rem;
-    color: var(--linkOffColor);
-    text-decoration: none;
-}
-
-.link:hover {
-    font-size: 1.2rem;
-    color: var(--linkOverColor);
-    text-decoration: none;
-}
-
-p {
-    font-size: 1.2rem;
-    color: var(--pColor);
-}
-
-h2 {
-    color: #87bb34;
-}
-
-.box-area {
-    display: none;
-}
-
-@media screen and (min-width: 600px)
+/* Agrandissement des images à partir du format tablette*/
+/* Ajout d'une anim de fond pour la page projet à partir du format tablette*/
+@media screen and (min-width: 570px)
 {
+
+    img {
+        margin-top: 100px;
+        width: 320px;
+        height: 320px;
+    }
+
+    .wrapper {
+        min-width: 480px;
+        min-height: 480px;
+        max-width: 480px;
+        max-height: 480px;
+    }
+
     .box-area {
         display: block;
         position: absolute;
